@@ -1,0 +1,11 @@
+#article {
+    color: red;
+}
+
+.news-container{
+    display: flex;
+}
+
+.half-container{
+    max-width: 50vw;
+}

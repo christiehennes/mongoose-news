@@ -27,7 +27,14 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/week18Populater");
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoosehw";
+
+// Set mongoose to leverage built in JavaScript ES6 Promises
+// Connect to the Mongo DB
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
+
+
 
 // Import routes and give the server access to them.
 var routes = require("./controllers/newsController.js");
