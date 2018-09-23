@@ -3,7 +3,19 @@ $.getJSON("/articles", function(data) {
     // For each one
     for (let i = 0; i < data.length; i++) {
       // Display the apropos information on the page
-      $("#articles").append(`<p id="article" data-id=${data[i]._id}> ${data[i].title} <br /> ${data[i].link}</p>`);
+      $("#articles").append(`
+        <div class="card p-3"> 
+       <h5> <p id="article" data-id=${data[i]._id}>${data[i].title}</p></h5>
+          <a href=${data[i].link}">Link</a>
+        </div>
+      `);
+
+
+
+    // <p id="article" data-id=${data[i]._id}> ${data[i].title} <br /> ${data[i].link}</p>
+
+
+
     }
   });
   
