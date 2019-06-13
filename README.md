@@ -2,6 +2,8 @@
 
 This app presents scraped news from TechCrunch and allows users to comment on articles and view other comments on each article.  
 
+[Link](https://salty-shelf-19648.herokuapp.com/)
+
 ## Instructions
 Click on the title of an article to view the comments. Once you post or delete a comment, the window will close and if you click on the article again, you can see the new comments. 
 
